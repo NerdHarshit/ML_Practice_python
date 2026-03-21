@@ -1,0 +1,199 @@
+'#' in front of day = day over fully with notes and code execution
+
+📍 Where You Are Right Now
+
+You have completed:
+
+#Day 1
+
+Core ML training engine
+
+You learned:
+
+Vectorized thinking
+
+Mean Squared Error
+
+Gradient Descent
+
+Learning rate behavior
+
+Convergence / divergence
+
+And you implemented linear regression from scratch.
+
+#Day 2
+
+First classifier
+
+You learned:
+
+Logistic regression
+
+Sigmoid
+
+Binary cross entropy
+
+Log-odds interpretation
+
+Decision boundary
+
+Gradient simplification
+
+Meaning of weights
+
+You also connected it to neurons and neural networks.
+
+This is already a very strong base.
+
+🧭 What Comes Next
+
+Now we move from toy models → real ML models.
+
+Phase 1 (Days 1-10)
+
+Core ML Mechanics
+
+You are here.
+
+#Day 3
+
+Multiple features
+
+z = w1x1 + w2x2 + ... + b
+
+This introduces:
+
+vectors
+
+dot product
+
+feature importance
+
+#Day 4
+
+Vectorized ML
+
+Instead of loops:
+
+X @ W + b
+
+You’ll understand how ML handles thousands of samples simultaneously.
+
+Day 5
+
+Train / Validation / Test split
+
+Why models overfit and how we detect it.
+
+Day 6
+
+Regularization
+
+Prevent models from memorizing data.
+
+L1
+L2
+Day 7
+
+Feature engineering
+
+How data representation affects ML performance.
+
+Day 8
+
+Gradient descent variants
+
+You asked about these already.
+
+We’ll cover:
+
+Batch GD
+SGD
+Mini-batch GD
+Momentum
+Adam
+Day 9
+
+Evaluation metrics
+
+Different problems require different metrics:
+
+Accuracy
+Precision
+Recall
+F1
+ROC-AUC
+Day 10
+
+Full ML pipeline
+
+You will build:
+
+data → model → training → evaluation
+
+like a real ML project.
+
+Phase 2 (Days 11-25)
+
+PyTorch + Neural Networks
+
+Here things get exciting.
+
+You’ll learn:
+
+tensors
+
+autograd
+
+neural networks
+
+CNN basics
+
+Projects:
+
+digit classifier
+
+image classifier
+
+tabular prediction
+
+Phase 3 (Days 26-40)
+
+Real ML Engineering
+
+Topics:
+
+hyperparameters
+
+debugging models
+
+feature scaling
+
+data leakage
+
+model comparison
+
+Phase 4 (Days 41-55)
+
+Hackathon AI Weapon Mode
+
+You’ll build real systems like:
+
+resume analyzer
+
+vision detector
+
+health risk predictor
+
+gesture control
+
+Phase 5 (Days 56-60)
+
+Mastery Phase
+
+You practice:
+
+designing ML systems
+explaining decisions
+model debugging

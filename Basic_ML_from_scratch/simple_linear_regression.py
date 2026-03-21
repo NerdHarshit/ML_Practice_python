@@ -41,7 +41,7 @@ rng = np.random.default_rng()
 w = rng.random()
 b = rng.random()
 
-y_pred = w*x + b #initally y+pred too is full of shit
+y_pred = w*x - b #initally y+pred too is full of shit
 
 def get_mse_loss(y,y_p):
     mse = np.mean((y-y_p)**2)
