@@ -80,13 +80,13 @@ X @ W + b
 
 You’ll understand how ML handles thousands of samples simultaneously.
 
-Day 5
+#Day 5
 
 Train / Validation / Test split
 
 Why models overfit and how we detect it.
 
-Day 6
+#Day 6
 
 Regularization
 
@@ -94,7 +94,7 @@ Prevent models from memorizing data.
 
 L1
 L2
-Day 7
+#Day 7
 
 Feature engineering
 
@@ -113,6 +113,7 @@ SGD
 Mini-batch GD
 Momentum
 Adam
+
 Day 9
 
 Evaluation metrics
@@ -197,3 +198,66 @@ You practice:
 designing ML systems
 explaining decisions
 model debugging
+
+--------------------------------------------------------
+Phase 2 — Practical ML (Next)
+
+Next topics normally are:
+
+Decision Trees
+Random Forest
+Gradient Boosting
+SVM
+KNN
+
+These are standard ML algorithms.
+
+Phase 3 — Deep Learning
+
+Then we move into:
+
+Neural Networks
+Backpropagation
+CNN
+autograd 
+tensors
+RNN / Transformers
+Phase 4 — ML Engineering
+
+Real-world skills:
+
+data pipelines
+model deployment
+hyperparameter tuning
+experiment tracking
+
+
+Phase 2 — Practical ML (Next)
+
+Next topics normally are:
+
+Decision Trees
+Random Forest
+Gradient Boosting
+SVM
+KNN
+
+These are standard ML algorithms.
+
+Phase 3 — Deep Learning
+
+Then we move into:
+
+Neural Networks
+Backpropagation
+CNN
+RNN / Transformers
+Phase 4 — ML Engineering
+
+Real-world skills:
+
+data pipelines
+model deployment
+hyperparameter tuning
+experiment tracking
+data leakage

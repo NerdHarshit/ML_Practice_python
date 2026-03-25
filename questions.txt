@@ -1,0 +1,45 @@
+🧪 Scenario 2 — Credit Card Fraud Detection
+transaction amount
+time of transaction
+location
+merchant type
+is_fraud (0/1)
+🧪 Scenario 3 — Fitness App
+steps per day
+calories intake
+sleep hours
+weight
+
+Goal:
+
+predict weight change
+🧪 Scenario 4 — E-commerce Recommendation
+user age
+time spent on app
+number of clicks
+previous purchases
+product category
+
+Goal:
+
+will user buy or not
+🧪 Scenario 5 — Air Pollution Prediction
+temperature
+humidity
+wind speed
+traffic density
+industrial activity
+pollution index
+🧪 Scenario 6 — Student Performance
+study hours
+attendance
+internet usage
+sleep hours
+exam score
+🧪 Scenario 7 — Medical Diagnosis
+age
+blood pressure
+cholesterol
+smoking (yes/no)
+exercise level
+disease (0/1)
