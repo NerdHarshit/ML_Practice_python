@@ -1,1 +1,3 @@
 decision tree and random forest from scratch
+ground up eqn derivations of knn and svm
+Mercer’s theorem.
