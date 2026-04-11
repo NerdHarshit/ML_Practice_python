@@ -1,263 +1,270 @@
-'#' in front of day = day over fully with notes and code execution
+Updated Structured ML / AI Roadmap
 
-📍 Where You Are Right Now
+You already finished Stage 0.
 
-You have completed:
+Stage 0 — Classical Machine Learning (Completed)
 
-#Day 1
+You already did:
 
-Core ML training engine
-
-You learned:
-
-Vectorized thinking
-
-Mean Squared Error
-
+Linear Regression
+Logistic Regression
 Gradient Descent
-
-Learning rate behavior
-
-Convergence / divergence
-
-And you implemented linear regression from scratch.
-
-#Day 2
-
-First classifier
-
-You learned:
-
-Logistic regression
-
-Sigmoid
-
-Binary cross entropy
-
-Log-odds interpretation
-
-Decision boundary
-
-Gradient simplification
-
-Meaning of weights
-
-You also connected it to neurons and neural networks.
-
-This is already a very strong base.
-
-🧭 What Comes Next
-
-Now we move from toy models → real ML models.
-
-Phase 1 (Days 1-10)
-
-Core ML Mechanics
-
-You are here.
-
-#Day 3
-
-Multiple features
-
-z = w1x1 + w2x2 + ... + b
-
-This introduces:
-
-vectors
-
-dot product
-
-feature importance
-
-#Day 4
-
-Vectorized ML
-
-Instead of loops:
-
-X @ W + b
-
-You’ll understand how ML handles thousands of samples simultaneously.
-
-#Day 5
-
-Train / Validation / Test split
-
-Why models overfit and how we detect it.
-
-#Day 6
-
-Regularization
-
-Prevent models from memorizing data.
-
-L1
-L2
-#Day 7
-
-Feature engineering
-
-How data representation affects ML performance.
-
-Day 8
-
-Gradient descent variants
-
-You asked about these already.
-
-We’ll cover:
-
-Batch GD
-SGD
-Mini-batch GD
-Momentum
-Adam
-
-Day 9
-
 Evaluation metrics
+Decision Trees
+Random Forest
+Gradient Boosting / XGBoost / LightGBM
+SVM
+KNN
 
-Different problems require different metrics:
+We add a few important classical ML concepts here:
 
-Accuracy
-Precision
-Recall
-F1
-ROC-AUC
-Day 10
+Added Topics
+K-Fold Cross Validation
+Bias-Variance Tradeoff
+Linear Discriminant Analysis (LDA)
+PCA
+Kernel PCA
 
-Full ML pipeline
+These belong here because they are fundamental ML theory.
 
-You will build:
+We’ll revisit them later in Kaggle workflows.
 
-data → model → training → evaluation
-
-like a real ML project.
-
-Phase 2 (Days 11-25)
-
-PyTorch + Neural Networks
-
-Here things get exciting.
-
-You’ll learn:
-
-tensors
-
-autograd
-
-neural networks
-
-CNN basics
-
-Projects:
-
-digit classifier
-
-image classifier
-
-tabular prediction
-
-Phase 3 (Days 26-40)
-
-Real ML Engineering
+Stage 1 — Vision Foundations (Current Stage)
 
 Topics:
 
-hyperparameters
+Image tensors ✔️
+Convolution operation ✔️
+Pooling layers ← next
+Feature maps & CNN architecture
+Implement CNNs in PyTorch
+Stage 2 — Practical CNN Projects
 
+Mini projects to understand full workflow.
+
+Projects:
+
+MNIST Classifier
+
+Learn:
+
+training pipeline
+loss curves
 debugging models
+CIFAR-10 Classifier
 
-feature scaling
+Learn:
 
-data leakage
+deeper CNNs
+augmentation
+overfitting
+Data Augmentation
+flips
+crops
+color jitter
+random erasing
+Model Evaluation
 
-model comparison
+We revisit:
 
-Phase 4 (Days 41-55)
+cross validation
+confusion matrix
+ROC curves
+Stage 3 — Real Computer Vision
 
-Hackathon AI Weapon Mode
+Here we add important architectures you mentioned.
 
-You’ll build real systems like:
+Topics:
 
-resume analyzer
+Transfer Learning
 
-vision detector
+Using pretrained models.
 
-health risk predictor
+CNN Architectures
 
-gesture control
+Case studies:
 
-Phase 5 (Days 56-60)
+ResNet
+MobileNet
+YOLO
+UNet
 
-Mastery Phase
+Why they matter:
 
-You practice:
+Architecture	Purpose
+ResNet	deep CNN training
+MobileNet	edge devices
+YOLO	object detection
+UNet	segmentation
 
-designing ML systems
-explaining decisions
-model debugging
+These will be very useful for your projects:
 
---------------------------------------------------------
-Phase 2 — Practical ML (Next)
+gesture detection
+animal classifier
+drone video enhancer
+Model Optimization
 
-Next topics normally are:
+For edge devices:
 
-Decision Trees
-Random Forest
-Gradient Boosting
-SVM
-KNN
+pruning
+quantization
+TensorRT / ONNX
+TensorFlow Lite
 
-These are standard ML algorithms.
+Useful for:
 
-Phase 3 — Deep Learning
+ESP32 vision
+Raspberry Pi projects
+Stage 4 — Sequential Models
 
-Then we move into:
+Topics:
 
-Neural Networks
-Backpropagation
-CNN
-autograd 
-tensors
-RNN / Transformers
-Phase 4 — ML Engineering
+RNN
+LSTM
+GRU
+Attention
+Transformers
 
-Real-world skills:
+Then we expand into:
 
-data pipelines
-model deployment
-hyperparameter tuning
-experiment tracking
+NLP
+tokenization
+embeddings
+sequence models
+LLMs
+GPT architecture
+fine-tuning
+retrieval augmented generation (RAG)
 
+Relevant to your idea:
 
-Phase 2 — Practical ML (Next)
+Flowchart → Code Generator
 
-Next topics normally are:
+Stage 5 — Generative AI
 
-Decision Trees
-Random Forest
-Gradient Boosting
-SVM
-KNN
+Topics:
 
-These are standard ML algorithms.
+Diffusion Models
 
-Phase 3 — Deep Learning
+How models like:
 
-Then we move into:
+Stable Diffusion
+DALL-E
 
-Neural Networks
-Backpropagation
-CNN
-RNN / Transformers
-Phase 4 — ML Engineering
+generate images.
 
-Real-world skills:
+Generative AI Systems
+image generation
+code generation
+multimodal models
+Stage 6 — ML Engineering
 
-data pipelines
-model deployment
-hyperparameter tuning
-experiment tracking
-data leakage
+Real-world ML systems.
+
+Topics:
+
+Data pipelines
+Feature stores
+Hyperparameter tuning
+Experiment tracking
+Data leakage
+Validation strategies
+Model deployment
+Inference optimization
+
+Tools:
+
+MLflow
+Weights & Biases
+Docker
+FastAPI
+Stage 7 — Advanced ML / Kaggle
+
+Topics:
+
+Kaggle competition workflow
+Feature engineering
+Ensembling
+Stacking / blending
+Model debugging
+Stage 8 — Unsupervised Learning
+
+Topics you asked for:
+
+KMeans clustering
+Hierarchical clustering
+PCA (already introduced earlier)
+Kernel PCA
+Association Rule Learning
+Apriori
+ECLAT
+
+Used for:
+
+recommendation systems
+pattern discovery
+Stage 9 — Reinforcement Learning
+
+Where these belong:
+
+UCB
+Thompson Sampling
+
+Topics:
+
+Multi-armed bandits
+Q-learning
+Policy gradients
+
+Applications:
+
+robotics
+autonomous vehicles
+trading
+autopilot systems
+Stage 10 — Autonomous Systems
+
+Your examples:
+
+self-driving car models
+F1 autonomous racing
+autopilot
+
+Topics:
+
+perception models
+reinforcement learning
+imitation learning
+sensor fusion
+Stage 11 — Agentic AI
+
+Systems like:
+
+Jarvis
+Alexa
+AutoGPT
+
+Topics:
+
+tool use
+planning
+LLM agents
+memory systems
+task execution
+
+Projects could include:
+
+AI assistant that sends emails
+code generator
+research assistant
+Stage 12 — Capstone ML Projects
+
+Your project list fits perfectly here:
+
+Lightweight animal classifier
+Star tracker ML model
+Drone footage enhancer
+Flowchart → code AI
+Audio tune extractor AI
+Gesture detection system
+Codenames AI bot
