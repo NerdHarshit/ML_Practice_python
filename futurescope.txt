@@ -1,3 +1,19 @@
 decision tree and random forest from scratch
 ground up eqn derivations of knn and svm
 Mercer’s theorem.
+
+
+
+class Conv2d(
+    in_channels: int,
+    out_channels: int,
+    kernel_size: _size_2_t,
+    stride: _size_2_t = 1,
+    padding: _size_2_t | str = 0,
+    dilation: _size_2_t = 1,
+    groups: int = 1,
+    bias: bool = True,
+    padding_mode: Literal['zeros', 'reflect', 'replicate', 'circular'] = "zeros",
+    device: Any | None = None,
+    dtype: Any | None = None
+)

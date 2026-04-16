@@ -1,144 +1,136 @@
-Updated Structured ML / AI Roadmap
+I am continuing my structured ML/AI learning roadmap from a previous session.
 
-You already finished Stage 0.
+So far I have completed:
 
-Stage 0 — Classical Machine Learning (Completed)
+Classical ML:
 
-You already did:
+* Linear Regression
+* Logistic Regression
+* Gradient Descent and optimizers
+* Feature engineering
+* Evaluation metrics
+* Decision Trees
+* Random Forest
+* Gradient Boosting
+* XGBoost / LightGBM
+* SVM
+* KNN
 
-Linear Regression
-Logistic Regression
-Gradient Descent
-Evaluation metrics
-Decision Trees
-Random Forest
-Gradient Boosting / XGBoost / LightGBM
-SVM
-KNN
+Deep Learning Fundamentals:
 
-We add a few important classical ML concepts here:
+* Neural networks
+* activation functions
+* forward/backpropagation
+* autograd
+* optimizers (SGD, Adam)
+* PyTorch tensors and training loops
 
-Added Topics
-K-Fold Cross Validation
-Bias-Variance Tradeoff
-Linear Discriminant Analysis (LDA)
-PCA
-Kernel PCA
+Computer Vision progress so far:
 
-These belong here because they are fundamental ML theory.
+* Image tensors
+* Convolution operations
+* Pooling layers
+* CNN architectures
+* Implementing CNNs in PyTorch
+* MNIST CNN classifier with full training pipeline
+* GPU training
+* training/validation tracking
+* confusion matrix
+* custom image inference
 
-We’ll revisit them later in Kaggle workflows.
+Then I built and debugged a CIFAR-10 CNN:
 
-Stage 1 — Vision Foundations (Current Stage)
+* trained baseline CNN (~78% accuracy)
+* performed model debugging using confusion matrix and mistake visualization
+* identified class confusion (cat vs dog)
+* improved architecture using BatchNorm and Dropout
+* retrained model (~79% accuracy)
+* analyzed results
 
-Topics:
+Now I want to continue the roadmap starting with **modern CNN architectures**, beginning with **ResNet**.
 
-Image tensors ✔️
-Convolution operation ✔️
-Pooling layers ← next
-Feature maps & CNN architecture
-Implement CNNs in PyTorch
-Stage 2 — Practical CNN Projects
+Please teach step-by-step with intuition and PyTorch implementation.
 
-Mini projects to understand full workflow.
+Start with:
 
-Projects:
+1. Why very deep CNNs fail (vanishing gradient problem)
+2. Residual learning idea
+3. Residual blocks and skip connections
+4. ResNet architecture
+5. Implementing a small ResNet for CIFAR-10 in PyTorch
+6. Training and evaluating it
 
-MNIST Classifier
+Use the same teaching structure as before:
 
-Learn:
+1. Concept explanation
+2. Why it matters
+3. Code examples
+4. Small exercises
 
-training pipeline
-loss curves
-debugging models
-CIFAR-10 Classifier
+Also keep the rest of the roadmap below in mind and try to follow this sequence as we progress:
 
-Learn:
+---
 
-deeper CNNs
-augmentation
-overfitting
-Data Augmentation
-flips
-crops
-color jitter
-random erasing
-Model Evaluation
-
-We revisit:
-
-cross validation
-confusion matrix
-ROC curves
-Stage 3 — Real Computer Vision
-
-Here we add important architectures you mentioned.
+Stage 3 — Modern Computer Vision
 
 Topics:
 
 Transfer Learning
-
 Using pretrained models.
 
-CNN Architectures
+CNN Architectures (case studies):
 
-Case studies:
+* ResNet → deep CNN training
+* MobileNet → edge devices
+* YOLO → object detection
+* UNet → segmentation
 
-ResNet
-MobileNet
-YOLO
-UNet
+These will be useful for projects like:
 
-Why they matter:
+* gesture detection
+* lightweight animal classifier
+* drone video enhancement
 
-Architecture	Purpose
-ResNet	deep CNN training
-MobileNet	edge devices
-YOLO	object detection
-UNet	segmentation
+Model Optimization for Edge Devices:
 
-These will be very useful for your projects:
-
-gesture detection
-animal classifier
-drone video enhancer
-Model Optimization
-
-For edge devices:
-
-pruning
-quantization
-TensorRT / ONNX
-TensorFlow Lite
+* pruning
+* quantization
+* TensorRT / ONNX
+* TensorFlow Lite
 
 Useful for:
 
-ESP32 vision
-Raspberry Pi projects
+* ESP32 vision
+* Raspberry Pi edge AI projects
+
+---
+
 Stage 4 — Sequential Models
 
 Topics:
 
-RNN
-LSTM
-GRU
-Attention
-Transformers
+* RNN
+* LSTM
+* GRU
+* Attention
+* Transformers
 
-Then we expand into:
+Then expand into NLP:
 
-NLP
-tokenization
-embeddings
-sequence models
-LLMs
-GPT architecture
-fine-tuning
-retrieval augmented generation (RAG)
+* tokenization
+* embeddings
+* sequence models
 
-Relevant to your idea:
+LLMs:
 
-Flowchart → Code Generator
+* GPT architecture
+* fine-tuning
+* Retrieval Augmented Generation (RAG)
+
+Relevant project:
+Flowchart → Code Generator AI
+
+---
 
 Stage 5 — Generative AI
 
@@ -146,125 +138,144 @@ Topics:
 
 Diffusion Models
 
-How models like:
+Examples:
 
-Stable Diffusion
-DALL-E
+* Stable Diffusion
+* DALL-E
 
-generate images.
+Generative AI systems:
 
-Generative AI Systems
-image generation
-code generation
-multimodal models
+* image generation
+* code generation
+* multimodal models
+
+---
+
 Stage 6 — ML Engineering
-
-Real-world ML systems.
 
 Topics:
 
-Data pipelines
-Feature stores
-Hyperparameter tuning
-Experiment tracking
-Data leakage
-Validation strategies
-Model deployment
-Inference optimization
+* data pipelines
+* feature stores
+* hyperparameter tuning
+* experiment tracking
+* data leakage
+* validation strategies
+* model deployment
+* inference optimization
 
 Tools:
 
-MLflow
-Weights & Biases
-Docker
-FastAPI
+* MLflow
+* Weights & Biases
+* Docker
+* FastAPI
+
+---
+
 Stage 7 — Advanced ML / Kaggle
 
 Topics:
 
-Kaggle competition workflow
-Feature engineering
-Ensembling
-Stacking / blending
-Model debugging
+* Kaggle competition workflow
+* feature engineering
+* ensembling
+* stacking / blending
+* debugging ML models
+
+---
+
 Stage 8 — Unsupervised Learning
-
-Topics you asked for:
-
-KMeans clustering
-Hierarchical clustering
-PCA (already introduced earlier)
-Kernel PCA
-Association Rule Learning
-Apriori
-ECLAT
-
-Used for:
-
-recommendation systems
-pattern discovery
-Stage 9 — Reinforcement Learning
-
-Where these belong:
-
-UCB
-Thompson Sampling
 
 Topics:
 
-Multi-armed bandits
-Q-learning
-Policy gradients
+* KMeans clustering
+* Hierarchical clustering
+* PCA
+* Kernel PCA
+
+Association Rule Learning:
+
+* Apriori
+* ECLAT
 
 Applications:
 
-robotics
-autonomous vehicles
-trading
-autopilot systems
+* recommendation systems
+* pattern discovery
+
+---
+
+Stage 9 — Reinforcement Learning
+
+Topics:
+
+* Multi-armed bandits
+* UCB
+* Thompson Sampling
+* Q-learning
+* Policy gradients
+
+Applications:
+
+* robotics
+* autonomous vehicles
+* trading systems
+* autopilot systems
+
+---
+
 Stage 10 — Autonomous Systems
 
-Your examples:
-
-self-driving car models
-F1 autonomous racing
-autopilot
-
 Topics:
 
-perception models
-reinforcement learning
-imitation learning
-sensor fusion
+* perception models
+* reinforcement learning
+* imitation learning
+* sensor fusion
+
+Examples:
+
+* self-driving car models
+* F1 autonomous racing
+* autopilot systems
+
+---
+
 Stage 11 — Agentic AI
 
-Systems like:
+Examples:
 
-Jarvis
-Alexa
-AutoGPT
+Jarvis-like assistants, Alexa, AutoGPT.
 
 Topics:
 
-tool use
-planning
-LLM agents
-memory systems
-task execution
+* tool use
+* planning
+* LLM agents
+* memory systems
+* task execution
 
-Projects could include:
+Example projects:
 
-AI assistant that sends emails
-code generator
-research assistant
+* AI assistant for email & tasks
+* automated coding assistant
+* research assistant
+
+---
+
 Stage 12 — Capstone ML Projects
 
-Your project list fits perfectly here:
+Projects I eventually want to build:
 
-Lightweight animal classifier
-Star tracker ML model
-Drone footage enhancer
-Flowchart → code AI
-Audio tune extractor AI
-Gesture detection system
-Codenames AI bot
+* Lightweight animal classifier
+* CubeSat star tracker ML model
+* Drone footage enhancer
+* Flowchart → code generator AI
+* Audio tune extractor AI
+* Gesture detection control system
+* Codenames game AI bot
+
+---
+
+For now begin with **ResNet** and guide me step-by-step.
