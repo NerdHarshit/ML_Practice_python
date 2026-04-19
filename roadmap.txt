@@ -83,7 +83,15 @@ CNN Architectures (case studies):
 * ResNet → deep CNN training
 * MobileNet → edge devices
 * YOLO → object detection
+----------------------------------- yaha tak done -------------------------
 * UNet → segmentation
+And also explore some very powerful concepts most courses skip, like:
+
+Anchor boxes
+Feature Pyramid Networks
+Why detectors struggle with small objects
+
+These ideas are key if you want to build real-world AI systems.
 
 These will be useful for projects like:
 

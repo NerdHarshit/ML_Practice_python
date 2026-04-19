@@ -9,37 +9,41 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+# -------------------------
+# Load pretrained MobileNet
+# -------------------------
 
-# -----------------------------
-# Load pretrained ResNet18
-# -----------------------------
-
-model = models.resnet18(weights="IMAGENET1K_V1")
+model = models.mobilenet_v2(weights="IMAGENET1K_V1")
 
 # Replace classifier
-model.fc = nn.Linear(model.fc.in_features, 10)
+model.classifier[1] = nn.Linear(
+    model.classifier[1].in_features,
+    10
+)
 
 model = model.to(device)
 
-# -----------------------------
-# Freeze backbone
-# -----------------------------
 
-for param in model.parameters():
+# -------------------------
+# Freeze backbone
+# -------------------------
+
+for param in model.features.parameters():
     param.requires_grad = False
 
-# Unfreeze last block
-for param in model.layer4.parameters():
+# Unfreeze last MobileNet block
+for param in model.features[-1].parameters():
     param.requires_grad = True
 
-# Unfreeze classifier
-for param in model.fc.parameters():
+# Train classifier
+for param in model.classifier.parameters():
     param.requires_grad = True
 
 
-# -----------------------------
-# Transforms
-# -----------------------------
+# -------------------------
+# Transforms (ImageNet normalization)
+# -------------------------
 
 transform_train = transforms.Compose([
     transforms.Resize((224,224)),
@@ -61,9 +65,9 @@ transform_test = transforms.Compose([
 ])
 
 
-# -----------------------------
+# -------------------------
 # Dataset
-# -----------------------------
+# -------------------------
 
 trainset = torchvision.datasets.CIFAR10(
     root="./data",
@@ -78,7 +82,6 @@ testset = torchvision.datasets.CIFAR10(
     download=True,
     transform=transform_test
 )
-
 
 trainloader = torch.utils.data.DataLoader(
     trainset,
@@ -95,13 +98,13 @@ testloader = torch.utils.data.DataLoader(
 )
 
 
-# -----------------------------
+# -------------------------
 # Training setup
-# -----------------------------
+# -------------------------
 
 criterion = nn.CrossEntropyLoss()
 
-optimizer = optim.Adam(
+optimizer = torch.optim.Adam(
     filter(lambda p: p.requires_grad, model.parameters()),
     lr=1e-4
 )
@@ -110,9 +113,9 @@ train_losses=[]
 val_acc=[]
 
 
-# -----------------------------
-# Training loop
-# -----------------------------
+# -------------------------
+# Training Loop
+# -------------------------
 
 for epoch in range(10):
 
@@ -164,14 +167,14 @@ for epoch in range(10):
 
 
 
-# =============================
+# =========================
 # Grad-CAM Visualization
-# =============================
+# =========================
 
-target_layer = model.layer4[-1]
+target_layer = model.features[-1][0]
 
-features = None
-gradients = None
+features=None
+gradients=None
 
 
 def forward_hook(module,input,output):
@@ -188,8 +191,7 @@ target_layer.register_forward_hook(forward_hook)
 target_layer.register_full_backward_hook(backward_hook)
 
 
-# Select image
-image, label = testset[0]
+image,label = testset[0]
 
 input_tensor = image.unsqueeze(0).to(device)
 
@@ -204,23 +206,21 @@ model.zero_grad()
 output[0,pred].backward()
 
 
-# Compute GradCAM weights
-pooled_grad = torch.mean(gradients, dim=(0,2,3))
+pooled_grad = torch.mean(gradients,dim=(0,2,3))
 
 
 for i in range(features.shape[1]):
     features[:,i,:,:] *= pooled_grad[i]
 
 
-heatmap = torch.mean(features, dim=1).squeeze().detach().cpu().numpy()
+heatmap = torch.mean(features,dim=1).squeeze().detach().cpu().numpy()
 
 heatmap = np.maximum(heatmap,0)
 
-if heatmap.max() != 0:
+if heatmap.max()!=0:
     heatmap /= heatmap.max()
 
 
-# Convert image back for display
 img = image.cpu().permute(1,2,0).numpy()
 
 heatmap = cv2.resize(heatmap,(224,224))
@@ -233,18 +233,3 @@ superimposed = heatmap*0.4 + img*255
 plt.imshow(superimposed.astype(np.uint8))
 plt.axis("off")
 plt.show()
-
-
-'''
-Epoch 1 Loss:0.430 ValAcc:89.59%
-Epoch 2 Loss:0.202 ValAcc:91.13%
-Epoch 3 Loss:0.120 ValAcc:90.78%
-Epoch 4 Loss:0.078 ValAcc:91.74%
-Epoch 5 Loss:0.055 ValAcc:91.45%
-Epoch 6 Loss:0.038 ValAcc:92.09%
-Epoch 7 Loss:0.032 ValAcc:91.61%
-Epoch 8 Loss:0.025 ValAcc:91.68%
-Epoch 9 Loss:0.026 ValAcc:91.42%
-Epoch 10 Loss:0.021 ValAcc:91.56%
-
-'''
