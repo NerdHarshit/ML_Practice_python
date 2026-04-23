@@ -47,11 +47,7 @@ Then I built and debugged a CIFAR-10 CNN:
 * retrained model (~79% accuracy)
 * analyzed results
 
-Now I want to continue the roadmap starting with **modern CNN architectures**, beginning with **ResNet**.
-
-Please teach step-by-step with intuition and PyTorch implementation.
-
-Start with:
+we also completed 
 
 1. Why very deep CNNs fail (vanishing gradient problem)
 2. Residual learning idea
@@ -60,18 +56,7 @@ Start with:
 5. Implementing a small ResNet for CIFAR-10 in PyTorch
 6. Training and evaluating it
 
-Use the same teaching structure as before:
-
-1. Concept explanation
-2. Why it matters
-3. Code examples
-4. Small exercises
-
-Also keep the rest of the roadmap below in mind and try to follow this sequence as we progress:
-
----
-
-Stage 3 — Modern Computer Vision
+and Stage 3 — Modern Computer Vision
 
 Topics:
 
@@ -83,7 +68,20 @@ CNN Architectures (case studies):
 * ResNet → deep CNN training
 * MobileNet → edge devices
 * YOLO → object detection
------------------------------------ yaha tak done -------------------------
+
+Now I want to continue the roadmap starting with **modern CNN architectures**, beginning with **UNet**.
+
+Please teach step-by-step with intuition and PyTorch implementation.
+
+Use the same teaching structure as before:
+
+1. Concept explanation
+2. Why it matters
+3. Code examples
+4. Small exercises
+
+Also keep the rest of the roadmap below in mind and try to follow this sequence as we progress:
+
 * UNet → segmentation
 And also explore some very powerful concepts most courses skip, like:
 
@@ -112,6 +110,7 @@ Useful for:
 * Raspberry Pi edge AI projects
 
 ---
+Then we do some real world mini projects using yolo , Raspberrypi and esp32 to be later used in our projects like autonomous drone, mars rover etc 
 
 Stage 4 — Sequential Models
 
@@ -283,7 +282,11 @@ Projects I eventually want to build:
 * Audio tune extractor AI
 * Gesture detection control system
 * Codenames game AI bot
+* custom image generation model (hopefully from as ground up as possible)
+*handwriting to code ide(college project)(handwritten code  ->text and gives autocomplete and suggestions too)
+*handwriting copy ai for cnc assignment machine 
+*custom ai assistant like jarvis / tars robot etc
 
 ---
 
-For now begin with **ResNet** and guide me step-by-step.
+For now begin with **UNet** and guide me step-by-step.

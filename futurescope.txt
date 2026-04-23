@@ -1,9 +1,18 @@
 decision tree and random forest from scratch
 ground up eqn derivations of knn and svm
 Mercer’s theorem.
+yolo from scratch
+mobilenet v2 from scratch
+darknet
+mask rcnn 
+rcnn 
+fast rcnn
+vlm
+vit
 
 
 
+whats all this shit in conv2d
 class Conv2d(
     in_channels: int,
     out_channels: int,
@@ -17,3 +26,5 @@ class Conv2d(
     device: Any | None = None,
     dtype: Any | None = None
 )
+
+https://www.kaggle.com/datasets/mdrifaturrahman33/levir-cd
